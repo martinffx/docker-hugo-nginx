@@ -14,6 +14,3 @@ RUN apk add --no-cache --virtual .deps curl tar && \
     apk del .deps
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
-
-ONBUILD ADD . /usr/src
-ONBUILD RUN hugo
